@@ -10,6 +10,28 @@ Table of Contents:
 - False Position Method: Depending on the function and the boundary location, it will converge at a different rate than the bisection method.
     Not as robust, but will often converge faster if the conditions are right.
 - Secant Method: Finding the root of a function without having to provide a a range or the derivative like the Newton-Raphson method.
+
+To-Add:
+- Gauss Elimination
+- LU Decomposition
+- Multi-Dimensional Optimization
+- Constrained Optimization with linear Programming
+- Fast Quadratic Interpolation for x points.
+- Fourier Approximation
+- Least Squares Regression
+- Integration Methods
+    - Trapezoidal Rule
+    - Simpson's Rule
+- Differentiation
+- ODEs
+    - Runga Kutta
+    - Eigenvalue
+    - Boundary Value
+
+
+To-Do:
+- Add in functionality to pass in function or value as RHS of equation in root finding methods.
+    - This may include adding in new function to handle creating lambda function for each method. Would avoid having to reuse same code.
 '''
 
 # Approximate Relative Error - Uses the previous and current guess of an iterative function to find the apprximate error along with accounting for divide by zero errors.
@@ -236,7 +258,3 @@ def secant_method(input_func, x_0, x_1, y=0, max_error = 1e-5, max_iterations = 
         print('Did not find an answer in %f iterations below a %.3e approximate error tolerance.' % (max_iterations, max_error))
     raise ValueError('Max iterations run in false-position method. Answer was not approximated.')
 
-my_function = lambda x: 2*x**4-20
-secant_method(my_function, 0, 1, print_out=True)  # In this case, y=0 and the iterations are set to default.
-
-print(2*1.778279**4-20)
