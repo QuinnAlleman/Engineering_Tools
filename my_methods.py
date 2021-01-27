@@ -258,3 +258,9 @@ def secant_method(input_func, x_0, x_1, y=0, max_error = 1e-5, max_iterations = 
         print('Did not find an answer in %f iterations below a %.3e approximate error tolerance.' % (max_iterations, max_error))
     raise ValueError('Max iterations run in false-position method. Answer was not approximated.')
 
+# Gauss Elimination - Solving a system of linear equations.
+def gauss_elimination(coeff_matrix, answer_matrix):
+    # https://en.wikipedia.org/wiki/Gaussian_elimination
+    # Should output the answer matrix.
+    # Input matrix should be NxN to get a unique solution.
+    return False
